@@ -54,43 +54,6 @@ This will be filled out in the future
 
 ## Required Libraries
 
-<!-- HTML Codes by Quackit.com -->
-<!DOCTYPE html>
-<title>Text Example</title>
-<style>
-div.container {
-background-color: #ffffff;
-}
-div.container p {
-font-family: Times;
-font-size: 14px;
-font-style: normal;
-font-weight: normal;
-text-decoration: none;
-text-transform: none;
-color: #ffffff;
-background-color: #26a691;
-}
-</style>
-
-<!-- HTML Codes by Quackit.com -->
-<!DOCTYPE html>
-<title>Text Example</title>
-<style>
-div.container {
-background-color: #ffffff;
-}
-div.container p {
-font-family: Times;
-font-size: 14px;
-font-style: normal;
-font-weight: normal;
-text-decoration: none;
-text-transform: none;
-color: #ffffff;
-background-color: #137162;
-}
-</style>
 
 <div class="container">
 <p>import numpy as np</p>
