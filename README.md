@@ -10,17 +10,17 @@
 
 
 <p align="center">
-  <a href="#Scrapping"> Scrapping </a> •
+  <a href="##Scrapping"> Scrapping </a> •
   <a href="#how-to-use">Analyses & Visualization </a> •
-  <a href="#download"> ML MODELS </a> •
-  <a href="#credits">Required Libraries</a> •
+  <a href="#download"> ML  Models</a> •
+  <a href="#credits">Deployment</a> •
   <a href="#related">Contact</a> •
   <a href="#license">License</a>
 </p>
 
-![screenshot](https://media.giphy.com/media/GRmrkmIt9GXncuAz14/giphy.gif)
-
-<img src="https://media.giphy.com/media/GRmrkmIt9GXncuAz14/giphy.gif" width="400" height="300">
+<div align="center" >
+  <img  src="https://i.hizliresim.com/13o286h.png" width="300" height="500" > 
+</div>
 
 
 ## Scrapping
@@ -36,39 +36,88 @@ The Scraper Mechanism consists of four different Python documents.
 
 This section consists of 7 separate steps.
 
-## <p style="background-color:#16A085; font-family:newtimeroman; color:#FFF9ED; font-size:125%; text-align:center; border-radius:5px 5px;"> Step 1: Small Look and understanding data - In this step, you are quickly examining the data and gaining an understanding of what it contains, such as the number of rows and columns, data types, and overall structure. </p>
+ <p> 
+<b>Step 1: </b>Small Look and understanding data - In this step, you are quickly examining the data and gaining an understanding of what it contains, such as the number of rows and columns, data types, and overall structure.  
 
-## <p style="background-color:#16A085; font-family:newtimeroman; color:#FFF9ED; font-size:125%; text-align:center; border-radius:10px 10px;">Step 2: Researches about All Columns - In this step, you are researching and understanding the meaning and significance of each column in the dataset. </p>
+<b>Step 2: </b> Researches about All Columns - In this step, you are researching and understanding the meaning and significance of each column in the dataset. 
 
-## <p style="background-color:#16A085; font-family:newtimeroman; color:#FFF9ED; font-size:125%; text-align:center; border-radius:10px 10px;">Step 3: Data Frame Check - In this step, you are checking the dataframe for any errors or inconsistencies, such as missing values or outliers</p>
+<b>Step 3: </b> Data Frame Check - In this step, you are checking the dataframe for any errors or inconsistencies, such as missing values or outliers
 
-## <p style="background-color:#2C3E50; font-family:newtimeroman; color:#FFF9ED; font-size:125%; text-align:center; border-radius:10px 10px;">Step 4: Small Look Cleaned Data Set If there is more needed - In this step, you are taking a quick look at the cleaned dataset to ensure that it is ready for further analysis. If any further cleaning is needed, it is done in this step. </p>
+<b>Step 4: </b> Small Look Cleaned Data Set If there is more needed - In this step, you are taking a quick look at the cleaned dataset to ensure that it is ready for further analysis. If any further cleaning is needed, it is done in this step. 
 
-## <p style="background-color:#2C3E50; font-family:newtimeroman; color:#FFF9ED; font-size:125%; text-align:center; border-radius:10px 10px;">Step 5: Data Analysis - In this step, you are using various statistical techniques to analyze the data and draw insights from it. </p>
+<b>Step 5: </b> Data Analysis - In this step, you are using various statistical techniques to analyze the data and draw insights from it. 
 
-## <p style="background-color:#8B8B00; font-family:newtimeroman; color:#FFF9ED; font-size:125%; text-align:center; border-radius:10px 10px;">Step 6: Data Interpretation - In this step, you are interpreting the results of the data analysis and making conclusions about the insights that have been gained.</p>
+<b>Step 6: </b>Data Interpretation - In this step, you are interpreting the results of the data analysis and making conclusions about the insights that have been gained.
 
-## <p style="background-color:#9B59B6; font-family:newtimeroman; color:#FFF9ED; font-size:125%; text-align:center; border-radius:10px 10px;">Step 7: Data Visualization - In this step, you are creating visual representations of the data, such as charts and graphs, to better communicate the insights and make them more easily understandable for others. This can be done using various libraries like matplotlib, seaborn etc.</p>
+<b>Step 7: </b> Data Visualization - In this step, you are creating visual representations of the data, such as charts and graphs, to better communicate the insights and make them more easily understandable for others. This can be done using various libraries like matplotlib, seaborn etc.
+
+</p>
+
 
 ## Ml MODELS 
 
-This will be filled out in the future 
+There are two notebooks in this section.
 
-## Required Libraries
+- ML_ALL.ipynb
+
+- ML-SALE&RENT.ipynb
+
+In my 1st file, I saw that a better result can be obtained when the data is separated as rented and for sale, so you can directly examine the 2nd file.
+
+<p>For ML-SALE&RENT.ipynb document 
+
+In this project, we proposed a machine-learning model for Price Prediction on Real Estate Listings. We preprocessed the data and evaluated multiple algorithms including <b>Linear Regression Method</b> and <b>the Lasso Regression method</b>. Our results showed that Linear Regression Method achieved the highest R-squared error rate with a score of <b>0.875</b> </p>
+
+  
+
+<p>In conclusion, the proposed model has the potential for Linear Regression Method. The model could predict the prices of Estates easily. The prediction is based on The Estates Features. The Features are; </p>
 
 
-<div class="container">
-<p>import numpy as np</p>
-<p>import pandas as pd</p>
-<p>import seaborn as sns </p>
-<p>import matplotlib.pyplot as plt</p>
-<p>from skimpy import clean_columns</p>
+<ul>
+
+<li>Number of rooms</li>
+
+<li>Living Area (m2)</li>
+
+<li>If the Kitchen Fully Equipped</li>
+
+<li>If Estate Furnished</li>
+
+<li>If Estate has a Garden</li>
+
+<li>If Estate has a Swimming Pool </li>
+
+<li>What are the conditions of the statement (6 options)</li>
+
+<li>Type of the house (17 different types)</li>
+
+<li>Their Region (9 different provinces from Belgium)</li>
+
+</ul>
+
+<p>Here is the some graphs for Actual prices and Predicted Prices </p>
+
+<p><b>For Sale</b> </p>
+
+<div align="center" >
+  <img  src="https://i.hizliresim.com/l5aeuaw.png"  width="700" height="500" alt="ML MODEL For Sale">
 </div>
+
+<p><b>For Rent</b> </p>
+
+<div align="center" >
+  <img  src="https://i.hizliresim.com/ovowmeu.png"  width="700" height="500" alt="ML MODEL For Sale">
+</div>
+
+## Deployment
+
+<p>This area will be filled in previous weeks </p>
+
 
 
 ## Contact
 
-Please, contact any of the authors via GitHub.
+Please, contact with me via GitHub.
 
 [Anil](https://github.com/anilembel)
 
