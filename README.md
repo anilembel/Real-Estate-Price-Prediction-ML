@@ -1,4 +1,5 @@
 
+
 <h1 align="center">
   <br>
   <img src="https://becode.org/app/uploads/2020/03/cropped-becode-logo-seal.png" alt="Logo" width="200" height="200"></a></p>
@@ -108,6 +109,14 @@ In this project, we proposed a machine-learning model for Price Prediction on Re
 <div align="center" >
   <img  src="https://i.hizliresim.com/ovowmeu.png"  width="700" height="500" alt="ML MODEL For Sale">
 </div>
+
+## Conclusion
+
+<p><b> What's Learned</b> </p>
+<p>After the first 3 stages of the project, I learned how to write data, analyze data, set up the ml model and make the data ready for the model.</p>
+
+<p><b> Results About the Project</b> </p> 
+<p>In the model I built on the price estimation, I saw that the most influential factors are obviously the area of ​​the house in square meters, the number of rooms, the presence of a garden and its location.</p>
 
 ## Deployment
 
