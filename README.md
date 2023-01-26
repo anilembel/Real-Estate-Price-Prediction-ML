@@ -19,7 +19,7 @@
 </p>
 
 <div align="center" >
-  <img  src="https://i.hizliresim.com/13o286h.png" width="300" height="500" > 
+  <img  src="https://i.hizliresim.com/13o286h.png" width="400" height="700" > 
 </div>
 
 
