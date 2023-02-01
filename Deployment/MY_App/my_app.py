@@ -18,7 +18,7 @@ st.set_page_config("House Price Prediction App",
                    page_icon="https://thumbs.dreamstime.com/b/flat-house-icon-vector-69856517.jpg")  # page title
 
 img = Image.open(
-    "/Users/anilfurkanembel/Desktop/Studies/Immo_Analyses_Visualization/Deployment/image1.jpeg")  # image
+    "/Users/anilfurkanembel/Desktop/Studies/Immo_Analyses_Visualization/Deployment/MY_App/image1.jpeg")  # image
 
 st.image(img, caption="House")
 
@@ -27,20 +27,9 @@ st.write("<h1 style='font-family:Courier; background-color:yellow; color:black; 
          unsafe_allow_html=True)  # project title
 st.markdown("""---""")
 
-# social_acc = ["About","LinkedIn","Github"]
-# social_acc_nav = st.sidebar.selectbox("About", social_acc)
-# if social_acc_nav == "About":
-#     st.sidebar.markdown("<h2 style='text-align: center;'> Auto Scout 24 </h2> ",unsafe_allow_html=True)
-#     st.sidebar.markdown("""---""")
-#     st.sidebar.markdown("""
-#     • Used and New Cars \n
-#     • Motorbikes \n
-#     • Trucks """)
-# st.sidebar.markdown("[ Visit Website](https://www.autoscout24.com/?genlnk=navi&genlnkorigin=tr-all-all-home)")
-
 
 df = pd.read_csv(
-    "/Users/anilfurkanembel/Desktop/Studies/Immo_Analyses_Visualization/Deployment/Rent.csv")
+    "/Users/anilfurkanembel/Desktop/Studies/Immo_Analyses_Visualization/Deployment/MY_App/Rent.csv")
 
 choice1 = st.selectbox("Select the City:", ('region_Antwerp', 'region_Brussels', 'region_East Flanders',
                                             'region_Flemish Brabant', 'region_Hainaut', 'region_Limburg', 'region_Liège', 'region_Luxembourg', 'region_Namur', 'region_Walloon Brabant'))
@@ -89,6 +78,7 @@ lin_reg_model_R.fit(X_train, y_train)
 # prediction on tarining data
 training_data_prediction_R = lin_reg_model_R.predict(X_train)
 pickle.dump(lin_reg_model_R, open('lin_reg_model_R', 'wb'))
+
 anil_model = pickle.load(open('lin_reg_model_R', 'rb'))
 
 my_dict = {
