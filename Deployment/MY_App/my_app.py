@@ -31,14 +31,14 @@ st.markdown("""---""")
 df = pd.read_csv(
     "/Users/anilfurkanembel/Desktop/Studies/Immo_Analyses_Visualization/Deployment/MY_App/Rent.csv")
 
-choice1 = st.selectbox("Select the City:", ('region_Antwerp', 'region_Brussels', 'region_East Flanders',
-                                            'region_Flemish Brabant', 'region_Hainaut', 'region_Limburg', 'region_Liège', 'region_Luxembourg', 'region_Namur', 'region_Walloon Brabant'))
+choice1 = st.selectbox("Select the City:", ('Antwerp', 'Brussels', 'East Flanders',
+                                            'Flemish Brabant', 'Hainaut', 'Limburg', 'Liège', 'Luxembourg', 'Namur', 'Walloon Brabant'))
 st.write(
     f'<h1 style="font-family:Courier; background-color:yellow;opacity: 0.9;text-align: center; color:black;;font-size:16px;">{"You have selected :"}{choice1}  </h1>', unsafe_allow_html=True)
 st.write("\n")
 
-choice2 = st.selectbox("Select the House Type:", ('type_Appartement', 'type_Bungalow', 'type_Duplex', 'type_Logementétudiant',
-                       'type_Maison', 'type_Maisondecampagne', 'type_Rez-de-chaussée', 'type_Studio', 'type_Triplex', 'type_Villa'))
+choice2 = st.selectbox("Select the House Type:", ('Appartement', 'Bungalow', 'Duplex', 'Logementétudiant',
+                       'Maison', 'Maisondecampagne', 'Rez-de-chaussée', 'Studio', 'Triplex', 'Villa'))
 st.write(
     f'<h1 style="font-family:Courier; background-color:yellow;opacity: 0.9;text-align: center; color:black;;font-size:16px;">{"You have selected :"}{choice2}  </h1>', unsafe_allow_html=True)
 
@@ -50,15 +50,15 @@ choice4 = st.number_input("Enter Number Of Rooms:", min_value=1, max_value=7)
 st.write(
     f'<h1 style="font-family:Courier; background-color:yellow;opacity: 0.9;text-align: center; color:black;;font-size:16px;">{"You have selected :"}{choice4}  </h1>', unsafe_allow_html=True)
 
-choice5 = st.selectbox("Select the House Type for Furnished :", (1, 0))
+choice5 = st.selectbox("Select the House Type for Furnished :", ("Yes", "No"))
 st.write(
     f'<h1 style="font-family:Courier; background-color:yellow;opacity: 0.9;text-align: center; color:black;;font-size:16px;">{"You have selected :"}{choice5}  </h1>', unsafe_allow_html=True)
 
-choice6 = st.selectbox("Select House Type for Garden :", (1, 0))
+choice6 = st.selectbox("Select House Type for Garden :", ("Yes", "No"))
 st.write(
     f'<h1 style="font-family:Courier; background-color:yellow;opacity: 0.9;text-align: center; color:black;;font-size:16px;">{"You have selected :"}{choice6}  </h1>', unsafe_allow_html=True)
 
-choice7 = st.selectbox("Select Kitchen Type equipped :", (1, 0))
+choice7 = st.selectbox("Select Kitchen Type equipped :", ("Yes", "No"))
 st.write(
     f'<h1 style="font-family:Courier; background-color:yellow;opacity: 0.9;text-align: center; color:black;;font-size:16px;">{"You have selected :"}{choice7}  </h1>', unsafe_allow_html=True)
 
@@ -82,8 +82,8 @@ pickle.dump(lin_reg_model_R, open('lin_reg_model_R', 'wb'))
 anil_model = pickle.load(open('lin_reg_model_R', 'rb'))
 
 my_dict = {
-    choice1: 1,
-    choice2: 1,
+    "region_" + choice1: 1,
+    "type_" + choice2: 1,
     "number_of_rooms": choice4,
     "living_area": choice3,
     "furnished": choice5,
@@ -94,6 +94,13 @@ my_dict = {
 
 test_df = pd.DataFrame.from_dict([my_dict])
 test_df = test_df.reindex(columns=X.columns, fill_value=0)
+
+# assign the columns which will be changed
+columns_to_change = ["furnished", "garden", "fully_equipped_kitchen"]
+
+# looking all the rows in the columns and change it
+for column in columns_to_change:
+    test_df[column] = test_df[column].replace({"Yes": 1, "No": 0})
 
 
 prediction = anil_model.predict(test_df)
